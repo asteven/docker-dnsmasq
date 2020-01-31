@@ -1,0 +1,21 @@
+#!/bin/sh
+
+
+action="$1"
+
+log=/tmp/dhcp-script.log
+
+echo "     -----" >> $log
+
+env >> $log
+echo "$@" >> $log
+
+
+case "$action" in
+   init)
+      # fetch leases from database
+      :
+   ;;
+esac
+
+exit 0
