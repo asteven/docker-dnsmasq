@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3
 
 LABEL maintainer "Steven Armstrong <steven.armstrong@id.ethz.ch>"
 
@@ -12,7 +12,7 @@ COPY tftproot /tftproot
 
 EXPOSE 53 53/udp
 
-COPY docker-entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
